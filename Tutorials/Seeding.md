@@ -54,6 +54,11 @@ npm run dev
 This command runs the developmetnserver. This is so that we can see the records after the datbase is seeded. 
 
 ```bash
+npx prisma migrate dev
+```
+This command is used to update the version controle of the schema. 
+
+```bash
 npx prisma db seed
 ```
 This command is used to exacute the seeding scriopt. THis command uses prisma to pipulate the datbase with the data that is defind in your seed script. 
