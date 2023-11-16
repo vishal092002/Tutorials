@@ -1,5 +1,5 @@
 # Seeding Tutorial
-Database seeing is the process of populating a datbase with an inital set of data. In our project we are using Prisma and Faker to do this. 
+Seeding a database is the process of populating it with initial data. This is especially useful in development environments, where you need data to test features or debug issues. In your case, you are using Prisma, an open-source database toolkit, to seed your database.
 
 ## Prisma ###
 Prisma is an ORM or Object relational manager that is used  to make connections to a datbase easy with auto generated queries that is tailored to the database schema that you create.  
@@ -42,7 +42,9 @@ model Pets {
 ```
 The prisma schema that we have above defines two modesl users and pets. Each user can have multipal diffrent pets which is indicated by the parts field in the user model. The Pets model has a feild user that creates a relationshoip between the User model and Pet model which indicates ownership. 
 
-## Commands needed to seed database##
+## Commands needed to seed database ##
+Make sure that when you run the following commands to seed the DB that you are in the projects folder. 
+
 ```bash
 npm install 
 ```
