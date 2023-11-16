@@ -7,6 +7,41 @@ Prisma is an ORM or Object relational manager that is used  to make connections 
 ## Faker ##
 Faker is a library that is used to generate fake but realistic data. It is commanly used in software development for testing, databases and creating mock data for applications. 
 
+## Prisma Schema ##
+```bash
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
+  pets      Pets[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Pets {
+  id        Int      @id @default(autoincrement())
+  type      String
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    Int?
+}
+```
+The prisma schema that we have above defines two modesl users and pets. Each user can have multipal diffrent pets which is indicated by the parts field in the user model. The Pets model has a feild user that creates a relationshoip between the User model and Pet model which indicates ownership. 
+
 ## Commands needed to seed database##
 ```bash
 npm install 
