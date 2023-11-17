@@ -11,7 +11,7 @@ Playwright Test provides a robust and versatile platform for automating browser-
 - **Browser Instances**: When you run a Playwright test, it launches a browser instance either with or without the UI.
 - **Execution**: It then executes the actions described in your test scripts on the required browser instance.
 - **Supported Browsers**: These browsers include Google Chrome and Microsoft Edge (with Chromium), Apple Safari (with WebKit), and Mozilla Firefox.
-
+- **How to Run**: You can run Playwright tests using the `npm run test` command. The tests are executed in github actions as well.
 ### Our Code
 The following is the code that we have written for our program:
  
